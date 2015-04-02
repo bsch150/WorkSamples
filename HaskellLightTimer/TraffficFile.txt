@@ -1,0 +1,15 @@
+Intersection,1,2,north,10
+Intersection,2,1,south,10,3,north,11,4,west,12,5,east,13
+Intersection,3,2,south,11,6,north,14,7,west,15,8,east,16
+Intersection,4,7,north,17,2,east,12
+Intersection,5,8,north,18
+Intersection,6,3,south,14,9,west,19,10,east,20
+Intersection,7,4,south,17,3,east,15,9,north,21
+Intersection,8,5,south,18,3,west,16,10,north,22
+Intersection,9,7,south,21,6,east,19
+Intersection,10,8,south,22,6,west,20
+Car,1,north
+Car,4,east
+Car,7,east
+Car,5,North
+Car,6,South
