@@ -1,3 +1,20 @@
+/*
+Authored by Bryan Schrock in 2015.
+
+This program generates the mandelbrot set in parallel using Futures. 
+It is interactive and allwos the user to zoom and navigate freely
+until the values are too long for Scala's Double.
+
+Controls:
+Mouse Wheel to zoom
+Arrow Keys to navigate
+page up to increase "MaxIterations" and enable more detail at closer depth
+page down to reduce "MaxIterations"
+
+Enjoy!
+*/
+
+
 import java.awt.RenderingHints._
 import java.awt.image.BufferedImage
 import scala.swing.event.Key
