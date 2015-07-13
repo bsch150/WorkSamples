@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Bryan Schrock</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+	<link href='stylesheet.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="config">
+	<h1>About The Eye Project*</h1>
+	<p>Hello! I am Bryan Schrock, and I created this. If you're interested, you can view the source codes <a href="onePrime.js">here</a>.</p>
+	<p><u>You can go back to the project at any time by pressing M. Also, you can press it again to come back here.</u></p>
+	<h2>How it works</h2>
+	<p>The Eye Project started as a sort of experiment in randomness. Originally, it generated a single Eye in the center of the canvas, with random values governing most of the parameters for creation. Later versions became more interactive, and finally I added the automatic tutorial to tell you how to use it.</p>
+	<p>The project runs best on modern Google Chrome browsers. The Color Painter functionality is an HTML5 device, and I didn't try very hard to make IE or Firefox supported. Sorry. <a href="http://www.google.com/chrome/">Use Chrome</a>.</p>
+	<p>So, read the text in the automatic tuorials. It's very helpful I think, if you know the terms:
+		<ol>
+			<li><b>Eye</b>: The circular shape that is created upon clicking. An Eye has a single pupil, and many rings.</li>
+			<li><b>Pupil</b>: The center of the Eye, like the hole in a donut. There are many functions that can only be performed by clicking and holding the pupil you can:
+				<ul>
+					<li>Grow the entire Eye itself, linearly scaling the entire thing up or down. Do it with Q and W.</li>
+					<li>Scale the size of the pupil only. Do it with A and S.</li>
+					<li>Increasing or decreasing the number of vertices in the very first ring. If you click on the ring and increase the number of vertices, you actually only grow the second part of the ring's number of vertices- so this function has to go here. Do it with Z and X.</li>
+					<li>Add a new ring to the outside of the Eye. It will be White and will not be tagged for the Color Painter- more on that later. Do it with E.</li>
+					<li>Delete the last ring from the Eye. Do it with D.</li>
+					<li>Reset all of the Color Painter's points. More on that later. Do it with R.</li>
+				</ul>
+			</li>
+			<li><b>Ring</b>: Each section of triangles that surround each other and the pupil is a ring. The number of rings is random but can be changed manually. See above for that. Each Ring 
+				
+			</li>
+	</p>
+	<p>*Working title.</p>
+	<p>Width <input type='number' id="width"></p>
+	<p>Height <input type='number' id="height"></p>
+	<p>Dimension of the picture.</p>
+</div>
+	<input type="color" id="colorButton" style="position:absolute; left:-9999px; top:-9999px;"></input>
+<canvas id="wholePage"></canvas>
+</body>
+		<script src="Help.js"></script>
+		<script src="ColorPainter.js"></script>
+		<script src="onePrime.js"></script>
+</html>
+
