@@ -64,6 +64,7 @@ numCols = scala.io.StdIn.readInt
 println("How tall?")
 numRows = scala.io.StdIn.readInt
 drawAsciiMandel
+prompt
 var cmd = scala.io.StdIn.readLine
 var cmds = cmd.split(" ")
 var lastCmd = cmd
@@ -121,6 +122,8 @@ while(cmds(0) != "quit"){
 			rmin += moveSpeed*multBy
 			rmax += moveSpeed*multBy
 			drawAsciiMandel		
+		}else if(cmds(0) == "help"){
+			printHelp
 		}else{
 			try{
 				val num = cmds(0).toInt
@@ -128,11 +131,12 @@ while(cmds(0) != "quit"){
 				drawAsciiMandel
 			}catch{
 				case e: NumberFormatException => {
-					println("not a valid command")
+					println(cmd + " is not a valid command")
+					printHelp
 				}
 			}
 		}
-		println("enter command (help for help)")
+		prompt
 		cmd = scala.io.StdIn.readLine
 		if(cmd == "."){
 			cmd = lastCmd
@@ -147,6 +151,15 @@ while(cmds(0) != "quit"){
 			cmds = cmd.split(" ")
 		}
 	}
+}
+
+def prompt(){
+	println("enter command (help for help)")
+}
+
+def printHelp(){
+	println("\nThe interface works as follows: \nType any of these commands to do them:\n\tzoom\n\tup\n\tleft\n\tright\n\tdown\n\nThe directionals move the scene in that direction.")
+	println("You can type an Integer alone to set the max iterations to that integer. MaxIterations is initially 40.\nEach command can be followed by an Integer specifying how many times you want to perform that action. For example, 'up 10' would move up by 10 time the normal step. All of the commands can take negative parameters.\nType reset to reset, and quit to quit.\n\n") 
 }
 
 class Complex2(var r: Double, var i: Double) {
